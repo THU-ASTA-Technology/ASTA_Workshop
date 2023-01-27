@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
 
-:root {
-
-  --primary: #4d91fe;
-  --grey: #f7f7f7;
-  --white: #fff;
-
-}
+/* TODO6:添加导航栏文字，并设置颜色*/
 
 /* TODO8:去除页面边缘的空白，（并试着让box的排版更加美观）*/
 
@@ -25,7 +19,6 @@ body {
 /* TODO7:添加导航条*/
 
 .navTitle {
-  color: var(--primary);
   font-size: 20px;
   /* 下面的设定覆盖了 h1 的一些默认风格*/
   font-weight: normal;
@@ -72,11 +65,6 @@ body {
 
 }
 
-.line {
-  
-  border-color: var(--grey);
-
-}
 
 /* TODO11:对subContainer进行属性设置以使两栏文字占据相同宽度 */
 
