@@ -1,14 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
+/* TODO5:切换字体*/
 
 /* TODO6:添加导航栏文字，并设置颜色*/
 
 /* TODO8:去除页面边缘的空白，（并试着让box的排版更加美观）*/
-
-body {
-  
-  font-family: "Open Sans", sans-serif;
-
-}
 
 /* TODO10:使用flex将文字分为两栏*/
 
