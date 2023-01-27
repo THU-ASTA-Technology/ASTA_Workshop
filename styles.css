@@ -22,14 +22,10 @@ body {
   text-align: center;
 }
 
-.navContainer {
-
-  background-color: var(--primary);
-
-}
+/* TODO7:添加导航条*/
 
 .navTitle {
-  color: var(--white);
+  color: var(--primary);
   font-size: 20px;
   /* 下面的设定覆盖了 h1 的一些默认风格*/
   font-weight: normal;
