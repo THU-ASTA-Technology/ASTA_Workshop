@@ -86,7 +86,7 @@ body {
 
 }
 
-/* 对subContainer进行属性设置以使两栏文字占据相同宽度 */
+/* TODO11:对subContainer进行属性设置以使两栏文字占据相同宽度 */
 
 .subContainer + .subContainer {
   
