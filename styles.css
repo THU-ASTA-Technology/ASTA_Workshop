@@ -16,9 +16,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.u-flex {
-  display: flex;
-}
+/* TODO10:使用flex将文字分为两栏*/
 
 .u-textCenter {
   text-align: center;
@@ -88,11 +86,6 @@ body {
 
 /* TODO11:对subContainer进行属性设置以使两栏文字占据相同宽度 */
 
-.subContainer + .subContainer {
-  
-  margin-left: var(--m);
-
-}
 
 .subTitle {
   
