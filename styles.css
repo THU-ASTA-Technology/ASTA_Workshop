@@ -6,9 +6,6 @@
 
 /* TODO10:使用flex将文字分为两栏*/
 
-.u-textCenter {
-  text-align: center;
-}
 
 /* TODO7:添加导航条*/
 
@@ -67,6 +64,5 @@
   
   font-size: 1.5em;
   font-weight: 300;
-  margin: var(--m) var(--s);
   
 }
