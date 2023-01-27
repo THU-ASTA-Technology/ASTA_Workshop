@@ -6,63 +6,8 @@
 
 /* TODO10:使用flex将文字分为两栏*/
 
-
 /* TODO7:添加导航条*/
-
-.navTitle {
-  font-size: 20px;
-  /* 下面的设定覆盖了 h1 的一些默认风格*/
-  font-weight: normal;
-}
-
-.appContainer {
-  max-width: 960px;
-  
-}
-
-.avatarContainer {
-  padding: 0 35%;
-}
-
-.avatar {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  display: block;
- 
-  padding-top: 100%;
-
-  
-  /* ToDo9:将头像变圆 */
-
-  
-  background-image: url("头像1.jpg");
-
-
-  background-position-y: center;
-  background-position-x: center;
-  background-repeat: no-repeat;
-
-  
-  background-size: cover;
-
-
-}
-
-.name {
-
-  font-size: 2.4em;
-  font-weight: 300;
-
-}
 
 
 /* TODO11:对subContainer进行属性设置以使两栏文字占据相同宽度 */
 
-
-.subTitle {
-  
-  font-size: 1.5em;
-  font-weight: 300;
-  
-}
