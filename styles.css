@@ -86,12 +86,7 @@ body {
 
 }
 
-.subContainer {
-
-  flex-grow: 1;
-  flex-basis: 0;
-
-}
+/* 对subContainer进行属性设置以使两栏文字占据相同宽度 */
 
 .subContainer + .subContainer {
   
