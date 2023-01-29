@@ -25,12 +25,15 @@ class Captcha():
             self.sources = string.ascii_letters + string.digits
 
     def get_text(self):
+        # Your code
         pass
 
     def get_font_color(self):
+        # Your code
         pass
 
     def get_line_color(self):
+        # Your code
         pass
 
     def draw_text(self,draw, text, font, captcha_width, captcha_height, spacing=20):
@@ -93,6 +96,7 @@ class Captcha():
         :return:
         '''
         # 按照概率随机绘制小圆点
+        # Your code
         pass
 
     def make_captcha(self):
