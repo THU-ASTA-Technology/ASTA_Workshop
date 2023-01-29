@@ -26,15 +26,16 @@ class Captcha():
 
     def get_text(self):
         # Your code
-        pass
+        text = random.sample(self.sources,k=self.text_number)
+        return ''.join(text)
 
     def get_font_color(self):
-        # Your code
-        pass
+        font_color = (random.randint(0, 150), random.randint(0, 150), random.randint(0, 150))
+        return font_color
 
     def get_line_color(self):
-        # Your code
-        pass
+        line_color = (random.randint(0, 250), random.randint(0, 255), random.randint(0, 250))
+        return line_color
 
     def draw_text(self,draw, text, font, captcha_width, captcha_height, spacing=20):
         '''
