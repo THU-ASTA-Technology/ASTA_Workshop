@@ -98,7 +98,11 @@ class Captcha():
         '''
         # 按照概率随机绘制小圆点
         # Your code
-        pass
+        for w in range(width):
+            for h in range(height):
+                tmp = random.randint(0, 100)
+                if tmp < point_chance:
+                    draw.point((w, h), fill=self.get_line_color())
 
     def make_captcha(self):
         # 获取验证码的宽度， 高度
