@@ -8,3 +8,8 @@
   --m: 16px;
   --l: 24px;
 }
+.app-container{
+  max-width: 960px;
+  padding: var(--m) var(--m);
+  margin: auto;
+}

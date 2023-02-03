@@ -3,36 +3,37 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+.profileItem-title {
+    flex-grow: 2;
+    flex-basis: 0;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profileItem-content {
+    flex-grow: 8;
+    flex-basis: 0;
+    margin-left: var(--m);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile-avatar {
+    padding: 0 35%;
+}
+
 .appContainer {
     max-width: 960px;
     padding: var(--m) var(--m);
     margin: auto;
 }
 
-.name {
-
+.profile-name {
     font-size: 2.4em;
     font-weight: 300;
-
 }
 
-.line {
-
+.profile-line {
     border-color: var(--grey);
-
-}
-
-.subContainer {
-
-    flex-grow: 1;
-    flex-basis: 0;
-
-}
-
-.subContainer+.subContainer {
-
-    margin-left: var(--m);
-
 }
 
 .subTitle {
@@ -40,5 +41,4 @@ body {
     font-size: 1.5em;
     font-weight: 300;
     margin: var(--m) var(--s);
-
 }

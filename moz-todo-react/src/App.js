@@ -7,7 +7,9 @@ function App() {
   return (
     <div>
       <Bar/>
+      <div className='app-container'>
       <Profile/>
+      </div>
     </div>
   );
 }
