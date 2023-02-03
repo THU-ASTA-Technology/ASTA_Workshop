@@ -1,13 +1,14 @@
 import React from "react";
 import "./Profile.css";
+import "../utils.css"
 import Avatar from "./Avatar.js";
 const ProfileItem = (props) => {
     return (
         <div className="profileItem-container">
-            <h4 className="profileItem-title">
+            <h4 className="profileItem-title u-textCenter">
                 {props.title}
             </h4>
-            <div className="profileItem-content">
+            <div className="profileItem-content u-textCenter">
                 {props.content}
             </div>
         </div>
@@ -25,10 +26,11 @@ const Profile = (props) => {
             <hr class="profile-line" />
             <div className="profile-item-container u-flex">
                 <div className="profile-item u-flexColumn u-textCenter">
-                    <ProfileItem title={"About us"} content={"111111"} />
+                    <ProfileItem title={"About me"} content={"这个人很懒，还没有写简介"} />
                 </div>
-                <div className="profile-item u-flexColumn u-textCenter">
-                    <ProfileItem title={"About us"} content={"111111"} />
+
+                <div className="profile-item u-flexColumn  u-textCenter">
+                    <ProfileItem title={"个人爱好"} content={"第一爱好是吃饭，第二爱好是睡觉"} />
                 </div>
             </div>
         </div>
