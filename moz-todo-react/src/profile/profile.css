@@ -1,32 +1,6 @@
-:root {
-    --primary: #4d91fe;
-    --grey: #f7f7f7;
-    --white: #fff;
-
-    --xs: 4px;
-    --s: 8px;
-    --m: 16px;
-    --l: 24px;
-}
-
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
-}
-
-
-.navContainer {
-    padding: var(--s) var(--m);
-
-    background-color: var(--primary);
-}
-
-.navTitle {
-    color: var(--white);
-    font-size: 20px;
-    /* 下面的设定覆盖了 h1 的一些默认风格*/
-    margin: 0;
-    font-weight: normal;
 }
 
 .appContainer {

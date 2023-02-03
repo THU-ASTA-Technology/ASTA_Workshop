@@ -1,8 +1,19 @@
 import React from "react";
-import "./profile.css";
-const profile=(props)=>{
+import "./Profile.css";
+import Avatar from "./Avatar.js";
+const Profile = (props) => {
     return (
-        <div className="profile"></div>
+        <div className="profile">
+            <div className="profile-avatar">
+                <Avatar />
+            </div>
+            <div className="profile-name u-textCenter">
+
+            </div>
+            <div className="profile-item u-flexColumn">
+
+            </div>
+        </div>
     );
 };
-export default profile;
+export default Profile;
