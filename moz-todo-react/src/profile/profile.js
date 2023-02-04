@@ -14,6 +14,10 @@ const ProfileItem = (props) => {
         </div>
     )
 }
+const ProfileSocial=(props)=>
+<div className="profileSocial-container">
+
+</div>
 const Profile = (props) => {
     return (
         <div className="profile">
