@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+.profile-avatar {
+    padding: 0 35%;
+}
+
+.appContainer {
+    max-width: 960px;
+    padding: var(--m) var(--m);
+    margin: auto;
+}
+
+.profile-name {
+    font-size: 2.4em;
+    font-weight: 300;
+}
+
+.profile-line {
+    border-color: var(--grey);
+}
+
+.profileItem-title {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: var(--m) var(--s);
+}
