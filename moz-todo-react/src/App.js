@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import './utils.css';
-import Profile from './profile/Profile.js';
-import Bar from './bar/Bar';
+import Profile from './Profile/Profile.js';
+import Bar from './Bar/Bar';
 function App() {
   return (
     <div>
