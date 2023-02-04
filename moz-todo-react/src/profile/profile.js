@@ -1,8 +1,8 @@
 import React from "react";
 import "./profile.css";
-const profile=(props)=>{
+const Profile=(props)=>{
     return (
         <div className="profile"></div>
     );
 };
-export default profile;
+export default Profile;
