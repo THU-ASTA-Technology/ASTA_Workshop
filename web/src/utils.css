@@ -1,0 +1,42 @@
+:root {
+    --primary--dark: #0000ff;
+    --primary: #396dff;
+    --primary--dim: #6987db;
+    --darkgrey: #d4d4d4;
+    --medgrey: #e0e0e0;
+    --grey: #f7f7f7;
+    --white: #fff;
+    --black: #000000;
+  
+    --xs: 4px;
+    --s: 8px;
+    --m: 16px;
+    --l: 24px;
+    --xl: 32px;
+    --xxl: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+
+.u-flex {
+    display: flex;
+}
+
+.u-textCenter {
+    text-align: center;
+}
+
+.u-flexColumn {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.u-flexColumn+.u-flexColumn {
+    margin-left: var(--m);
+}
