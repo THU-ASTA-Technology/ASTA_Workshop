@@ -1,11 +1,11 @@
 import React from "react";
-import "./Bar.css";
+import "./Nevbar.css";
 const Bar = (props) => {
     return (
-        <div className="bar-container">
-            <div className="bar-title">
+        <div className="Navbar-container">
+            <div className="Navbar-title">
                 导航栏 is here
             </div>
         </div>);
 };
-export default Bar;
+export default Navbar;

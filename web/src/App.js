@@ -2,11 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import './utils.css';
 import Profile from './Profile/Profile.js';
-import Bar from './Bar/Bar';
+import Navbar from './Navbar/Navbar';
 function App() {
   return (
     <div>
-      <Bar/>
+      <Navbar/>
       <div className='App-container'>
       <Profile/>
       </div>
