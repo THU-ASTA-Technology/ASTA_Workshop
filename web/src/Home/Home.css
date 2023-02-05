@@ -1,0 +1,43 @@
+.Home-subContainer {
+    flex-grow: 1;
+    flex-basis:50%;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 100% - padding;
+    padding: var(--s);
+}
+
+.Home-profile{
+    font-family:'Times New Roman', Times, serif;
+}
+
+.Home-subContainer + .Home-subContainer {
+    margin-left: var(--xxl);
+}
+
+.Home-container{
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100% - padding;
+    padding:var(--s);
+}
+
+.Home-tapeText,
+.Home-blogText{
+    text-decoration:none;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: deepskyblue;
+    border-radius: 5px;
+}
+
+.Home-tapeAndBlog{
+    text-decoration: none;
+}
+
+.Home-stat>div{
+    flex-grow: 1;
+    flex-basis: 50%;
+    max-width: 100% - 2 * padding;
+    padding: var(--s);
+}
