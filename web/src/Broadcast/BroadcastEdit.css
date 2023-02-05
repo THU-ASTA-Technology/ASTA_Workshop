@@ -1,0 +1,12 @@
+.BroadcastEdit-container {
+  height: 1000px;
+  width: 100%;
+}
+
+.BroadcastEdit-textarea {
+  resize:vertical;
+}
+
+.BroadcastEdit-publish {
+  font-size: medium;
+}
