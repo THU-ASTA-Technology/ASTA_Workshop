@@ -7,7 +7,7 @@
     --grey: #f7f7f7;
     --white: #fff;
     --black: #000000;
-  
+
     --xs: 4px;
     --s: 8px;
     --m: 16px;
@@ -23,7 +23,6 @@ body {
     font-weight: 300;
 }
 
-
 .u-flex {
     display: flex;
 }
@@ -35,4 +34,44 @@ body {
 .u-flexColumn {
     display: flex;
     flex-direction: column;
+}
+
+.border {
+    border: 2px solid var(--darkgrey);
+    border-radius: 2px;
+}
+
+.block {
+    padding: 8px;
+    padding-right: 0px;
+    margin: 0px;
+    margin-top: 8px;
+}
+
+.block:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.time {
+    font-family: monospace;
+    opacity: 80%;
+}
+
+.button {
+    color: var(--white);
+    width: min-content;
+    background-color: var(--primary);
+    padding: 2px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0px;
+    border: 2px solid var(--darkgrey);
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--primary--dark);
+    border-color: var(--primary--dim);
 }

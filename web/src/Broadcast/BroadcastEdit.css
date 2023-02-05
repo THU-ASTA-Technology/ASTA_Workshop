@@ -10,3 +10,8 @@
 .BroadcastEdit-publish {
   font-size: medium;
 }
+
+.BroadcastEdit-publishContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}

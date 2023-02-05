@@ -10,7 +10,7 @@ function App() {
     <div>
       <Navbar/>
       <div className='App-container'>
-        <Profile/>
+        <Broadcast/>
       </div>
     </div>
   );

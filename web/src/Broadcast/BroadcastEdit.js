@@ -15,11 +15,14 @@ const BroadcastEdit = (props) => {
         event.preventDefault();
 
         props.handleSubmit(broadcast.content);
+        setBroadcast(defaultBroadcast);
     };
     return (
         <div className="BroadcastEdit-container u-flexColumn">
             <textarea className="BroadcastEdit-textarea" placeholder={defaultContent} value={broadcast.content} onChange={handleContentChange}></textarea>
-            <button onClick={handleSubmit} class="button BroadcastEdit-publish u-textCenter">Publish</button>
+            <div className="BroadcastEdit-publishContainer">
+                <button onClick={handleSubmit} className="BroadcastEdit-publish button">Publish</button>
+            </div>
         </div>
     );
 };

@@ -24,7 +24,7 @@ const BroadcastList = (props) => {
     return (
         <div className="BroadcastList-container u-flexColumn">
             <BroadcastEdit handleSubmit={handleSubmit}/>
-            <div>
+            <div className="Broadcast-list">
                 {broadcastList.map((broadcast,index) => <BroadcastBlock key={index} broadcast={broadcast} />)}
             </div>
         </div>

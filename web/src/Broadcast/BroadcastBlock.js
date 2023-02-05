@@ -23,7 +23,7 @@ const EmptyBroadcastBlock = (props) => {
 
 const BroadcastBlock = (props) => {
     return (
-        <div className="BroadcastBlock-container border">
+        <div className="BroadcastBlock-container block border">
             <SingleBroadcast 
                 time={props.broadcast.time} 
                 content={props.broadcast.content}
