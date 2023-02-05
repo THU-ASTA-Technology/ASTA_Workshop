@@ -1,5 +1,5 @@
 import React from "react";
-import "./Nevbar.css";
+import "./Navbar.css";
 const Navbar = (props) => {
     return (
         <div className="Navbar-container">
