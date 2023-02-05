@@ -1,10 +1,10 @@
-.bar-container {
+.Navbar-container {
     padding: var(--s) var(--m);
 
     background-color: var(--primary);
 }
 
-.bar-title {
+.Navbar-title {
     color: var(--white);
     font-size: 20px;
     /* 下面的设定覆盖了 h1 的一些默认风格*/
