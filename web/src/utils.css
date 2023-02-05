@@ -33,10 +33,6 @@ body {
 }
 
 .u-flexColumn {
-    flex-grow: 1;
-    flex-basis: 0;
-}
-
-.u-flexColumn+.u-flexColumn {
-    margin-left: var(--m);
+    display: flex;
+    flex-direction: column;
 }

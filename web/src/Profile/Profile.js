@@ -2,6 +2,7 @@ import React from "react";
 import "./Profile.css";
 import "../utils.css"
 import Avatar from "./Avatar.js";
+
 const ProfileItem = (props) => {
     return (
         <div className="profileItem-container">
