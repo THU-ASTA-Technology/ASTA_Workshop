@@ -5,8 +5,9 @@ import "./BroadcastList.css";
 
 
 const LatestBroadcast = (props) => {
-    const [broadcast, setBroadcast] = useState({});
-
+    let broadcast1 = {content:"hello world!",time:new Date().toDateString()};
+    const [broadcast, setBroadcast] = useState(broadcast1);
+    //Todo: 让LatestBroadcast呈现出与BroadcastList中不同的样式
     if (Object.keys(broadcast).length === 0) {
         return <EmptyBroadcastBlock />
     }
