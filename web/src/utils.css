@@ -57,7 +57,10 @@ body {
     padding: 8px;
     padding-right: 0px;
     margin: 0px;
-    margin-top: 8px;
+}
+
+.block + .block {
+    margin-bottom: 8px;
 }
 
 .block:hover {
