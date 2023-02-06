@@ -4,6 +4,17 @@ import BroadcastEdit from "./BroadcastEdit";
 import "./BroadcastList.css";
 
 
+const LatestBroadcast = (props) => {
+    const [broadcast, setBroadcast] = useState({});
+
+    if (Object.keys(broadcast).length === 0) {
+        return <EmptyBroadcastBlock />
+    }
+    return (
+        <BroadcastBlock broadcast={broadcast} />
+    );
+}
+
 const BroadcastList = (props) => {
     
     const [broadcastList, setBroadcastList] = useState([]);
@@ -31,4 +42,4 @@ const BroadcastList = (props) => {
     );
 };
 
-export { BroadcastList };
+export { LatestBroadcast, BroadcastList };

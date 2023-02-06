@@ -36,6 +36,10 @@ body {
     flex-direction: column;
 }
 
+.u-flex-alignCenter {
+    align-items: center;
+}
+
 .border {
     border: 2px solid var(--darkgrey);
     border-radius: 2px;

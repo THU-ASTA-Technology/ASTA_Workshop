@@ -13,7 +13,7 @@ const Page = (props) => {
 
 const NotFound = (props) => {
     return (
-        <h1>Not Found</h1>
+        <h1 className="u-textCenter">Not Found</h1>
     );
 };
 
