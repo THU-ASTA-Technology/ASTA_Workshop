@@ -5,24 +5,12 @@ import "./BroadcastList.css";
 
 
 const LatestBroadcast = (props) => {
-    let broadcast1 = {content:"hello world!",time:new Date().toString()};
-    const [broadcast, setBroadcast] = useState(broadcast1);
-    //Todo: 让LatestBroadcast呈现出与BroadcastList中不同的样式
-    if (Object.keys(broadcast).length === 0) {
-        return <EmptyBroadcastBlock />
-    }
-    return (
-        <BroadcastBlock broadcast={broadcast} />
-    );
+    
 }
 
 const BroadcastList = (props) => {
     
     const [broadcastList, setBroadcastList] = useState([]);
-
-    const handleSubmit = (content) => {
-        setBroadcastList([...broadcastList, {content:content, time:new Date().toString()}]);
-    }
    
     if (broadcastList.length === 0) {
         return (
