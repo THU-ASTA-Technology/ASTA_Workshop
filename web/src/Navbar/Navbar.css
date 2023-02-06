@@ -11,23 +11,3 @@
     font-weight: 400;
     flex-wrap: wrap-reverse;
 }
-
-.NavBar-linkContainer {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-}
-
-.NavBar-link {
-    color: var(--white);
-    text-decoration-line: none;
-    margin: 0;
-    padding: 0;
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
-.NavBar-link:hover {
-    opacity: 60%;
-}

@@ -8,10 +8,7 @@ const Navbar = (props) => {
             <div className="Navbar-title">
                 导航栏 is here
             </div>
-            <div className="NavBar-linkContainer u-flex">
-                <Link to="/" className="NavBar-link">Home</Link>
-                <Link to="/broadcast" className="NavBar-link">Broadcast</Link>
-            </div>
+            
         </div>);
 };
 export default Navbar;

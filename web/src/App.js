@@ -13,11 +13,7 @@ function App() {
     <Router>
       <Navbar />
       <Page>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/broadcast" exact element={<Broadcast />} />
-          <Route path="*" exact element={<NotFound />} />
-        </Routes>
+        <Broadcast />
       </Page>
     </Router>
   );
