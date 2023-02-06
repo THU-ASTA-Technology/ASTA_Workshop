@@ -3,14 +3,12 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-.profile-avatar {
-    padding: 0 35%;
+.profile {
+    margin-top: 8px;
 }
 
-.appContainer {
-    max-width: 960px;
-    padding: var(--m) var(--m);
-    margin: auto;
+.profile-avatar {
+    padding: 0 35%;
 }
 
 .profile-name {

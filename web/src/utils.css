@@ -31,6 +31,10 @@ body {
     text-align: center;
 }
 
+.u-textRight {
+    text-align: right;
+}
+
 .u-flexColumn {
     display: flex;
     flex-direction: column;
@@ -38,6 +42,10 @@ body {
 
 .u-flex-alignCenter {
     align-items: center;
+}
+
+.u-flex-justifySpace {
+    justify-content: space-between;
 }
 
 .border {
