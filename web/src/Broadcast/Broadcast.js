@@ -5,13 +5,6 @@ import "./Broadcast.css";
 
 const Broadcast = (props) => {
 
-    return (
-        <div className="Broadcast-container u-flexColumn">
-
-            <BroadcastList />
-        </div>
-            
-    );
 };
 
 export default Broadcast;
