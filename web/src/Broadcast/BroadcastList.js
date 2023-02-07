@@ -39,10 +39,7 @@ const LatestBroadcast = (props) => {
 const BroadcastList = (props) => {
     
     const [broadcastList, setBroadcastList] = useState([]);
-
-    const handleSubmit = (content) => {
-        setBroadcastList([...broadcastList, {content:content, time:new Date().toString()}]);
-    }
+    
     //begin
     const getBroadcastList = () => {
         get("broadcast/list/")
@@ -60,7 +57,7 @@ const BroadcastList = (props) => {
     if (broadcastList.length === 0) {
         return (
             <div className="BroadcastList-container">
-                <BroadcastEdit handleSubmit={handleSubmit}/>
+                <BroadcastEdit />
                 <EmptyBroadcastBlock />
             </div>
         );
@@ -68,7 +65,7 @@ const BroadcastList = (props) => {
 
     return (
         <div className="BroadcastList-container u-flexColumn">
-            <BroadcastEdit handleSubmit={handleSubmit}/>
+            <BroadcastEdit />
             <div className="Broadcast-list">
                 {broadcastList.map((broadcast) => <BroadcastBlock key={broadcast.broadcastId} broadcast={broadcast} />)}
             </div>
