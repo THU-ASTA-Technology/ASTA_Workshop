@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.profile {
+    margin-top: 8px;
+}
+
+.profile-avatar {
+    padding: 0 35%;
+}
+
+.profile-name {
+    font-size: 2.4em;
+    font-weight: 400;
+}
+
+.profile-line {
+    border-color: var(--grey);
+}
+
+.profileItem-title {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: var(--m) var(--s);
+}
+
+.profile-item {
+    flex: 1;
+}

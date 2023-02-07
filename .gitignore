@@ -1,0 +1,15 @@
+# node
+node_modules
+
+# api
+api/*.sqlite3
+__pycache__
+
+# mac
+.DS_Store
+
+# vscode
+.vscode
+
+# idea
+.idea

@@ -1,0 +1,92 @@
+:root {
+    --primary--dark: #0000ff;
+    --primary: #396dff;
+    --primary--dim: #6987db;
+    --darkgrey: #d4d4d4;
+    --medgrey: #e0e0e0;
+    --grey: #f7f7f7;
+    --white: #fff;
+    --black: #000000;
+
+    --xs: 4px;
+    --s: 8px;
+    --m: 16px;
+    --l: 24px;
+    --xl: 32px;
+    --xxl: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-textCenter {
+    text-align: center;
+}
+
+.u-textRight {
+    text-align: right;
+}
+
+.u-flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.u-flex-alignCenter {
+    align-items: center;
+}
+
+.u-flex-justifySpace {
+    justify-content: space-between;
+}
+
+.border {
+    border: 2px solid var(--darkgrey);
+    border-radius: 2px;
+}
+
+.block {
+    padding: 8px;
+    padding-right: 0px;
+    margin: 0px;
+}
+
+.block + .block {
+    margin-bottom: 8px;
+}
+
+.block:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.time {
+    font-family: monospace;
+    opacity: 80%;
+}
+
+.button {
+    color: var(--white);
+    width: min-content;
+    background-color: var(--primary);
+    padding: 2px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0px;
+    border: 2px solid var(--darkgrey);
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--primary--dark);
+    border-color: var(--primary--dim);
+}

@@ -1,0 +1,5 @@
+.Page-container {
+    max-width: 75%;
+    padding: var(--m) var(--m);
+    margin: auto;
+}
