@@ -13,7 +13,17 @@ const LatestBroadcast = (props) => {
     //Todo: 让LatestBroadcast呈现出与BroadcastList中不同的样式
 
     //begin
-    
+    const getLatestBroadcast = () => {
+        get("broadcast/latest/")
+            .then((response) => {
+                if (Object.keys(response).length !== 0) {
+                    setBroadcast(response)
+                }
+            })
+            .catch((error) => console.log(error));
+    }
+
+    useEffect(getLatestBroadcast, []);
     //end
 
 

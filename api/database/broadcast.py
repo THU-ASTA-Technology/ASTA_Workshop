@@ -35,8 +35,10 @@ def latest(request):
     # You just need to put the first broadcast into the result#
     # We provide tools.broadcastToDict() function for you.    #
     #-------------------START YOUR CODE HERE-------------------
-    pass
-    
+    if request.method != "GET":
+        return HttpResponse("Invalid HTTP Method!", status=400)
+    broadcastList = Broadcast.objects.all().order_by("-time")
+    result = tools.broadcastToDict(broadcastList.first())
     #--------------------END YOUR CODE HERE--------------------
     return HttpResponse(json.dumps(result), content_type="application/json")
 
