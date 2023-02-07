@@ -14,7 +14,11 @@ def list(request):
     # You just need to put all broadcast into the result list.#
     # We provide tools.broadcastToDict() function for you.    #
     #-------------------START YOUR CODE HERE-------------------
-    pass
+    if request.method != "GET":
+        return HttpResponse("Invalid HTTP Method!", status=400)
+    broadcastList = Broadcast.objects.all().order_by("-time")
+    for broadcast in broadcastList:
+        result.append(tools.broadcastToDict(broadcast))
 
     #--------------------END YOUR CODE HERE--------------------
     return HttpResponse(json.dumps(result), content_type="application/json")

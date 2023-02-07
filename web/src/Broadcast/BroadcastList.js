@@ -34,7 +34,20 @@ const BroadcastList = (props) => {
         setBroadcastList([...broadcastList, {content:content, time:new Date().toString()}]);
     }
     //begin
-    
+    const getBroadcastList = () => {
+        get("broadcast/list/")
+            .then((response) => {
+                if (response.length !== 0) {
+                    setBroadcastList(response);
+                }
+            })
+            .then(() => {
+                console.log(broadcastList);
+            })
+            .catch((error) => console.log(error));
+    }
+
+    useEffect(getBroadcastList, []);
     //end
 
     if (broadcastList.length === 0) {
