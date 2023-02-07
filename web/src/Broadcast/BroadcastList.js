@@ -13,17 +13,7 @@ const LatestBroadcast = (props) => {
     //Todo: 让LatestBroadcast呈现出与BroadcastList中不同的样式
 
     //begin
-    const getLatestBroadcast = () => {
-        get("broadcast/latest/")
-            .then((response) => {
-                if (Object.keys(response).length !== 0) {
-                    setBroadcast(response)
-                }
-            })
-            .catch((error) => console.log(error));
-    }
 
-    useEffect(getLatestBroadcast, []);
     //end
 
 
@@ -42,20 +32,7 @@ const BroadcastList = (props) => {
 
     
     //begin
-    const getBroadcastList = () => {
-        get("broadcast/list/")
-            .then((response) => {
-                if (response.length !== 0) {
-                    setBroadcastList(response);
-                }
-            })
-            .then(() => {
-                console.log(broadcastList);
-            })
-            .catch((error) => console.log(error));
-    }
-
-    useEffect(getBroadcastList, []);
+    
     //end
 
     if (broadcastList.length === 0) {

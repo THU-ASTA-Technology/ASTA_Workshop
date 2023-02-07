@@ -7,7 +7,7 @@ const Broadcast = (props) => {
 
     return (
         <div className="Broadcast-container u-flexColumn">
-            <Link to="/broadcast/edit">Publish</Link>
+            
             <BroadcastList />
         </div>
             

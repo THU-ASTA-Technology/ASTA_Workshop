@@ -20,9 +20,14 @@ from database import user, broadcast, views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('csrf/', views.csrf),
-    #path("user/register/", user.register),
 
-    path("broadcast/list/", broadcast.list),
-    path("broadcast/latest/", broadcast.latest),
-    path("broadcast/edit/", broadcast.edit),
+    ###########################################################
+    # TODO:                                                   #
+    # Here add the url and the corresponding function         #
+    #-------------------START YOUR CODE HERE-------------------
+    
+
+
+
+    #--------------------END YOUR CODE HERE--------------------
 ]

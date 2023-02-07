@@ -20,10 +20,7 @@ const BroadcastEdit = (props) => {
         //setBroadcast(defaultBroadcast);
 
         //begin
-        post("broadcast/edit/",
-            broadcast)
-            .then(() => navigate("/broadcast"))
-            .catch((error) => console.log(error));
+        
         //end
 
     };
