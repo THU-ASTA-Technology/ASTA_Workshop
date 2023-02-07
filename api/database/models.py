@@ -10,7 +10,15 @@ from django.contrib.auth.models import AbstractUser
 #                                                         # 
 # Hint: for time, try models.DateTimeField                #
 #-------------------START YOUR CODE HERE-------------------
+class User(AbstractUser):
+    name = models.CharField(max_length=100, default="", blank=False)
+    WechatID = models.CharField(max_length=100, default="", blank=True)
+    def __str__(self):
+        return self.username
     
+class Broadcast(models.Model):
+    time = models.DateTimeField(auto_now_add=True)
+    content = models.CharField(max_length=100, default="", blank=False)
 
 
 
