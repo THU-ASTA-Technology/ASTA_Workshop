@@ -13,7 +13,7 @@ const LatestBroadcast = (props) => {
     //Todo: 让LatestBroadcast呈现出与BroadcastList中不同的样式
 
     //begin
-
+    
     //end
 
 

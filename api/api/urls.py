@@ -26,6 +26,7 @@ urlpatterns = [
     # Here add the url and the corresponding function         #
     #-------------------START YOUR CODE HERE-------------------
     
+    path("broadcast/list/", broadcast.list),
 
 
 
