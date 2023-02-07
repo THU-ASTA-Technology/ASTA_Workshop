@@ -1,5 +1,5 @@
 .Broadcast-list {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-top: 8px;
 }

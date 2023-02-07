@@ -51,9 +51,6 @@ const BroadcastList = (props) => {
                     setBroadcastList(response);
                 }
             })
-            .then(() => {
-                console.log(broadcastList);
-            })
             .catch((error) => console.log(error));
     }
 

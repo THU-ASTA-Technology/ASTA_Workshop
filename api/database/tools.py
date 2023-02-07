@@ -14,9 +14,8 @@ def broadcastToDict(broadcast):
     # as keys of dictionary(result), and set value of members # 
     # as value of dictionary(result).                         #
     #-------------------START YOUR CODE HERE-------------------
-    
-
-
-
+    result["broadcastId"] = broadcast.id
+    result["time"] = broadcast.time.strftime('%Y-%m-%d %H:%M:%S')
+    result["content"] = broadcast.content
     #--------------------END YOUR CODE HERE--------------------
     return result
