@@ -28,7 +28,7 @@ urlpatterns = [
     
     path("broadcast/list/", broadcast.list),
     path("broadcast/latest/", broadcast.latest),
-
+    path("broadcast/edit/", broadcast.edit),
 
     #--------------------END YOUR CODE HERE--------------------
 ]

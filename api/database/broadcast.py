@@ -54,6 +54,16 @@ def edit(request):
     #                                                         #
     # Hint: use json.loads() for the body of POST             #
     #-------------------START YOUR CODE HERE-------------------
-    pass
+    if request.method != "POST":
+        return HttpResponse("Invalid HTTP Method!", status=400)
+    body = json.loads(request.body)
+    if ("content" not in body.keys()):
+        return HttpResponse("Content Missing!", status=400)
+    content = body["content"]
+    broadcast = Broadcast()
+    broadcast.content = content
+    broadcast.save()
+
+    return HttpResponse("Published Successfully!", status=200)
     
     #--------------------END YOUR CODE HERE--------------------
