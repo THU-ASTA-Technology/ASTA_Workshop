@@ -60,7 +60,7 @@ body {
 }
 
 .block + .block {
-    margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 .block:hover {

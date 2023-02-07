@@ -17,7 +17,6 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/broadcast" exact element={<Broadcast />} />
-          <Route path="/broadcast/edit" exact element={<BroadcastEdit />} />
           <Route path="*" exact element={<NotFound />} />
         </Routes>
       </Page>
