@@ -1,0 +1,11 @@
+.Tape-tapeLinks {
+    text-decoration: none;
+    color: chocolate;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.Tape-container {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
