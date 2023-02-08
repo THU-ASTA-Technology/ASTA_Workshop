@@ -5856,7 +5856,7 @@ jest@^27.4.3:
 
 js-md5@^0.7.3:
   version "0.7.3"
-  resolved "https://registry.npmjs.org/js-md5/-/js-md5-0.7.3.tgz"
+  resolved "https://registry.yarnpkg.com/js-md5/-/js-md5-0.7.3.tgz#b4f2fbb0b327455f598d6727e38ec272cd09c3f2"
   integrity sha512-ZC41vPSTLKGwIRjqDh8DfXoCrdQIyBgspJVPXHBGu4nZlAEvG3nf+jO9avM9RmLiGakg7vz974ms99nEV0tmTQ==
 
 js-sdsl@^4.1.4:
