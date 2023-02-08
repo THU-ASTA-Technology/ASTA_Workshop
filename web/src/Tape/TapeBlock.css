@@ -1,0 +1,21 @@
+/* .SingleTape-content {} */
+
+.SingleTape-time {
+    opacity: 80%;
+    font-family: monospace;
+}
+
+.TapeBlock-container {
+    padding: var(--s);
+    /* word-break: break-all; */
+    flex-grow: 1;
+
+    /* max-width: 100% - padding; */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.note {
+    color: tomato;
+    font-weight: bold;
+}
