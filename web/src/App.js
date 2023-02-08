@@ -32,18 +32,20 @@ function App() {
   };
   return (
     <Router>
-      <Navbar />
-      <Page>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/register" exact element={<Register />} />
-          <Route path="/login" exact element={<Login getUserInfo={ getUserInfo }/>} />
-          <Route path="/broadcast" exact element={<Broadcast />} />
-          <Route path="*" exact element={<NotFound />} />
-          <Route path="/tape" exact element={<Tape />} />
-          <Route path="/blog" exact element={<Blog/>}/>
-        </Routes>
-      </Page>
+      <UserIdContext.Provider value={userId}>
+        <Navbar />
+        <Page>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/register" exact element={<Register />} />
+            <Route path="/login" exact element={<Login getUserInfo={ getUserInfo }/>} />
+            <Route path="/broadcast" exact element={<Broadcast />} />
+            <Route path="*" exact element={<NotFound />} />
+            <Route path="/tape" exact element={<Tape />} />
+            <Route path="/blog" exact element={<Blog/>}/>
+          </Routes>
+        </Page>
+      </UserIdContext.Provider>
     </Router>
   );
 }
