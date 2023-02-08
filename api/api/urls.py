@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from database import user, broadcast, views
+from database import user, broadcast, views ,tape
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -24,11 +24,15 @@ urlpatterns = [
     ###########################################################
     # TODO:                                                   #
     # Here add the url and the corresponding function         #
-    #-------------------START YOUR CODE HERE-------------------
-    
+    # -------------------START YOUR CODE HERE-------------------
+
     path("broadcast/list/", broadcast.list),
     path("broadcast/latest/", broadcast.latest),
     path("broadcast/edit/", broadcast.edit),
 
-    #--------------------END YOUR CODE HERE--------------------
+    path("tape/list/", tape.list),
+    path("tape/latest/", tape.latest),
+    path("tape/edit/", tape.edit),
+
+    # --------------------END YOUR CODE HERE--------------------
 ]

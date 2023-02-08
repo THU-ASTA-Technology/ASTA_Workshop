@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./TapeBlock.css";
 import { get, post } from "../utils";
+import { useNavigate } from "react-router-dom";
 
 
 const EmptyTapeBlock = () => {
@@ -60,7 +61,7 @@ const TapeReply = (props) => {
 
 const TapeBlock = (props) => {
     const [tape, setTape] = useState(props.tape);
-    
+    const navigate = useNavigate();
     const handleSubmit = (reply) => {
         post("tape/edit/", {...tape, reply: reply})
             .then(() => {
@@ -71,6 +72,7 @@ const TapeBlock = (props) => {
                         setReplyInput(nullInput);
                     })
             })
+            .then(() => navigate(0))
             .catch((error) => console.log(error));
     };
 

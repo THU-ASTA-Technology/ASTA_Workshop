@@ -24,17 +24,6 @@ const Tape = (props) => {
     };
     return (
         <div className="Tape-container u-flexColumn">
-
-            {/* {userId ? <></> :
-                <>
-                <div className="TapeEdit-container u-flexColumn">
-                <textarea className="Tape-textarea" placeholder={defaultQuery} value={tape.query} onChange={handleQueryChange}></textarea>
-                </div>
-                <div className="Tape-button-right">
-                <button className="button" onClick={handleSubmit}>Submit</button>
-                </div>
-                </>
-            } */}
             <TapeEdit />
             <TapeList />
         </div>

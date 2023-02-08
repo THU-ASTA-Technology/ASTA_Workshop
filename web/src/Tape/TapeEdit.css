@@ -3,3 +3,8 @@
     box-sizing: border-box;
     width: 100%;
 }
+
+.TapeEdit-button{
+    display: flex;
+    flex-direction: row-reverse;     
+}

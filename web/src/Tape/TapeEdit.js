@@ -20,14 +20,17 @@ const TapeEdit = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         post("tape/edit/", tape)
-            .then(() => navigate("/tape"))
+            .then(() => navigate(0))
             .catch((error) => console.log(error));
     };
 
     return (
         <div className="TapeEdit-container u-flexColumn">
             <input placeholder={defaultQuery} value={tape.query} onChange={handleQueryChange}></input>
-            <button className="button" onClick={handleSubmit}>Submit</button>
+            <div className="TapeEdit-button">
+                <button className="button" onClick={handleSubmit}>Submit</button>
+            </div>
+            
         </div>
     );
 };

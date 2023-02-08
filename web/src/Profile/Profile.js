@@ -28,7 +28,7 @@ const Profile = (props) => {
             <div className="profile-name u-textCenter">
                 玛卡巴卡
             </div>
-            <hr class="profile-line" />
+            <hr className="profile-line" />
             <div className="profile-item-container u-flex">
                 <div className="profile-item u-flexColumn u-textCenter">
                     <ProfileItem title={"About me"} content={"这个人很懒，还没有写简介"} />
