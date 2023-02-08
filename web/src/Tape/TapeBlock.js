@@ -10,6 +10,30 @@ const EmptyTapeBlock = () => {
     );
 };
 
+const SingleTape = (props) => {
+    return (
+        <div className="SingleTape-container u-flexColumn">
+            <div className="SingleTape-time u-flex">
+                {props.time}
+                {props.hasReply ? 
+                <>
+                    
+                </>
+                : 
+                <>
+                    <div className="note">
+                        &nbsp;&nbsp;!
+                    </div>
+                </>
+                }
+            </div>
+            <div className="SingleTape-content">
+                {props.content}
+            </div>
+        </div>
+    );
+};
+
 const TapeReply = (props) => {
     const defaultReply = "Reply here";
     const [reply, setReply] = useState("");
@@ -56,7 +80,7 @@ const TapeBlock = (props) => {
     const [input, setInput] = useState(nullInput);
     
     const handleClick = (event) => {
-        if (userId) {
+       
             if (!isShow) {
                 setInput(replyInput);
                 setIsShow(true);
@@ -64,7 +88,7 @@ const TapeBlock = (props) => {
                 setInput(nullInput);
                 setIsShow(false);
             };
-        }
+        
     };
 
     return (

@@ -1,0 +1,31 @@
+.Tape-button-center {
+    text-align: center;
+}
+
+.Tape-button-right {
+    text-align: right;
+}
+
+.Tape-submitButton {
+    font-size: medium;
+    color: var(--white);
+    text-decoration-line: none;
+    background-color: var(--primary);
+    margin: 0px;
+    padding: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border: 2px solid var(--darkgrey);
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.Tape-submitButton:hover {
+    background-color: var(--primary--dark);
+    border-color: var(--primary);
+}
+
+
+.Tape-textarea {
+    resize: vertical;
+}
