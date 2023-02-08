@@ -17,5 +17,8 @@ class MarkdownView extends Component{
 		)
 	}
 }
+// yarn add for-editor
+// yarn add react-markdown
+// pip install django-mdeditor
 
 export default MarkdownView;
