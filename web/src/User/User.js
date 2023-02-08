@@ -6,9 +6,9 @@ import "./User.css";
 import { UserIdContext } from "../App";
 
 const Login = (props) => {
-    const defaulusername = "Username here";
+    const defaultusername = "Username here";
     const defaultpassword = "Password here";
-    const [username, setUsername] = useState(defaulusername);
+    const [username, setUsername] = useState(defaultusername);
     const [password, setPassword] = useState(defaultpassword);
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
@@ -36,8 +36,8 @@ const Login = (props) => {
     }, [userId]);
     return (
         <div className="Login-container u-flexColumn">
-            <input placeholder={defaultUsername} value={username} onChange={handleUsernameChange}></input>
-            <input placeholder={defaultPassword} value={password} onChange={handlePasswordChange}></input>
+            <input placeholder={defaultusername} value={username} onChange={handleUsernameChange}></input>
+            <input placeholder={defaultpassword} value={password} onChange={handlePasswordChange}></input>
             <button className="button" onClick={handleLogin}>Login</button>
             <div className="Login-register">
                 {"Don't have an account? "}
