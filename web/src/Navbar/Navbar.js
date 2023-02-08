@@ -11,6 +11,8 @@ const Navbar = (props) => {
             <div className="NavBar-linkContainer u-flex">
                 <Link to="/" className="NavBar-link">Home</Link>
                 <Link to="/broadcast" className="NavBar-link">Broadcast</Link>
+                <Link to="/tape" className="NavBar-link">Tape</Link>
+                <Link to="/blog" className="NavBar-link">Blog</Link>
             </div>
         </div>);
 };
