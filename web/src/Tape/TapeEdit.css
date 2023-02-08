@@ -1,0 +1,5 @@
+.TapeEdit-container {
+    padding: var(--s);
+    box-sizing: border-box;
+    width: 100%;
+}
