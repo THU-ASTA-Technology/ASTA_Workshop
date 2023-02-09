@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+from mdeditor.fields import MDTextField
 # Create your models here.
 ###########################################################
 # TODO:                                                   #
@@ -31,5 +31,11 @@ class Tape(models.Model):
     reply = models.CharField(max_length=100, default="", blank=True)
     replyTime = models.DateTimeField(blank=True, null=True)
 
+
+class Blog(models.Model):
+    title = models.CharField(max_length=128, default="", blank=False)
+    initTime = models.DateTimeField(auto_now_add=True)
+    lastTime = models.DateTimeField(auto_now_add=True)
+    content = MDTextField()
 
 # --------------------END YOUR CODE HERE--------------------
