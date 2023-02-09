@@ -13,11 +13,17 @@ import Profile from './Profile/Profile';
 const [userId, setUserId] = useState();
 
 const getUserInfo = () => {
-  //  TODO: get user info from backend
+  get("user/")
+      .then((response) => setUserId(response.userId))
+      .catch((error) => console.log(error));
 }
 
 const handleLogout = (event) => {
-  //  TODO: logout
+  event.preventDefault();
+    get("user/logout/")
+      .then((response) => alert(response))
+      .then(() => setUserId(undefined))
+      .catch((error) => console.log(error));
 };
 
 useEffect(getUserInfo, []);
