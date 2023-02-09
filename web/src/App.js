@@ -44,7 +44,7 @@ function App() {
             <Route path="/broadcast" exact element={<Broadcast />} />
             <Route path="*" exact element={<NotFound />} />
             <Route path="/tape" exact element={<Tape />} />
-            <Route path="/blog" exact element={<Blog/>}/>
+            {/* <Route path="/blog" exact element={<Blog/>}/> */}
           </Routes>
         </Page>
       </UserIdContext.Provider>

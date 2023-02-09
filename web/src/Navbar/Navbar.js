@@ -12,7 +12,7 @@ const Navbar = (props) => {
                 <Link to="/" className="NavBar-link">Home</Link>
                 <Link to="/broadcast" className="NavBar-link">Broadcast</Link>
                 <Link to="/tape" className="NavBar-link">Tape</Link>
-                <Link to="/blog" className="NavBar-link">Blog</Link>
+                {/* <Link to="/blog" className="NavBar-link">Blog</Link> */}
                 {props.userId ?
                 <button onClick={props.handleLogout} className="NavBar-link">
                     Logout
