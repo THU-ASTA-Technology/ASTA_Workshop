@@ -65,7 +65,7 @@ const BroadcastList = (props) => {
 
     return (
         <div className="BroadcastList-container u-flexColumn">
-            <BroadcastEdit />
+            {/* <BroadcastEdit /> */}
             <div className="Broadcast-list">
                 {broadcastList.map((broadcast) => <BroadcastBlock key={broadcast.broadcastId} broadcast={broadcast} />)}
             </div>
