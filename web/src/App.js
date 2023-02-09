@@ -38,6 +38,7 @@ function App() {
           <Route path="*" exact element={<NotFound />} />
           <Route path="/tape" exact element={<Tape />} />
           <Route path="/blog" exact element={<Blog/>}/>
+          <Route path="/login" exact element={<Login getUserInfo={ getUserInfo }/>} />
         </Routes>
       </Page>
     </Router>
