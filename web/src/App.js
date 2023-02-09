@@ -10,11 +10,21 @@ import Tape from './Tape/Tape';
 import Blog from './Blog/Blog';
 import BroadcastEdit from './Broadcast/BroadcastEdit';
 import Profile from './Profile/Profile';
+const [userId, setUserId] = useState();
 
+const getUserInfo = () => {
+  //  TODO: get user info from backend
+}
+
+const handleLogout = (event) => {
+  //  TODO: logout
+};
+
+useEffect(getUserInfo, []);
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar userId={userId} handleLogout={handleLogout}/>
       <Page>
         <Routes>
           <Route path="/" exact element={<Home />} />

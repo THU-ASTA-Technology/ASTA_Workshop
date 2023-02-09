@@ -13,6 +13,8 @@ const Navbar = (props) => {
                 <Link to="/broadcast" className="NavBar-link">Broadcast</Link>
                 <Link to="/tape" className="NavBar-link">Tape</Link>
                 <Link to="/blog" className="NavBar-link">Blog</Link>
+                {/* TODO: add the login link and logout button
+                      notice the user status */}
             </div>
         </div>);
 };
