@@ -4,16 +4,17 @@ import "./Tape.css";
 import { useNavigate } from "react-router-dom";
 import { post } from "../utils";
 import TapeEdit from "./TapeEdit";
-
+import { UserIdContext } from "../App";
 const defaultTape = {
     query: ""
 };
 const Tape = (props) => {
+    const userId = useContext(UserIdContext);
     const defaultQuery = "Tape here";
     const [tape, setTape] = useState(defaultTape);
 
     const handleQueryChange = (event) => {
-        setTape({...tape, query: event.target.value});
+        setTape({ ...tape, query: event.target.value });
     };
     const navigate = useNavigate();
 
@@ -24,7 +25,10 @@ const Tape = (props) => {
     };
     return (
         <div className="Tape-container u-flexColumn">
-            <TapeEdit />
+            {userId ?
+                <></> :
+                <TapeEdit />
+            }
             <TapeList />
         </div>
     );

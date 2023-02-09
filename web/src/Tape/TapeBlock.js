@@ -1,9 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import "./TapeBlock.css";
 import { get, post } from "../utils";
 import { useNavigate } from "react-router-dom";
-
+import { UserIdContext } from "../App";
 
 const EmptyTapeBlock = () => {
     return (
@@ -61,6 +61,7 @@ const TapeReply = (props) => {
 }
 
 const TapeBlock = (props) => {
+    const userId = useContext(UserIdContext);
     const [tape, setTape] = useState(props.tape);
     const navigate = useNavigate();
     const handleSubmit = (reply) => {
@@ -83,7 +84,7 @@ const TapeBlock = (props) => {
     const [input, setInput] = useState(nullInput);
     
     const handleClick = (event) => {
-       
+       if(userId)
             if (!isShow) {
                 setInput(replyInput);
                 setIsShow(true);
