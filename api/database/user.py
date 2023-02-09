@@ -16,8 +16,6 @@ def login(request):
         return HttpResponse('Username missing!', status=400)
     if('password' not in body.keys()):
         return HttpResponse('Password missing!', status=400)
-    username = body.get('username')
-    password = body.get('password')
     username = body["username"]
     password = body["password"]
     user = auth.authenticate(username=username, password=password)

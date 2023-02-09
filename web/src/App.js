@@ -13,6 +13,7 @@ import BroadcastEdit from './Broadcast/BroadcastEdit';
 import Profile from './Profile/Profile';
 import { Login, Register } from './User/User';
 import { get, post } from './utils';
+
 export const UserIdContext = React.createContext();
 function App() {
   const [userId, setUserId] = useState();
@@ -30,10 +31,11 @@ function App() {
       .then(() => setUserId(undefined))
       .catch((error) => console.log(error));
   };
+  useEffect(getUserInfo, [])
   return (
     <Router>
       <UserIdContext.Provider value={userId}>
-        <Navbar />
+        <Navbar userId = {userId} handleLogout = {handleLogout}/>
         <Page>
           <Routes>
             <Route path="/" exact element={<Home />} />

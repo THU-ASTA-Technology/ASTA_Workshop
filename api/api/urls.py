@@ -34,5 +34,9 @@ urlpatterns = [
     path("tape/latest/", tape.latest),
     path("tape/edit/", tape.edit),
 
+    path("user/",user.getInfo),
+    path('user/register/', user.register),
+    path('user/login/', user.login),
+    path('user/logout/', user.logout)
     # --------------------END YOUR CODE HERE--------------------
 ]

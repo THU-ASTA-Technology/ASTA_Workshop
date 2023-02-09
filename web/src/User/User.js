@@ -8,8 +8,8 @@ import { UserIdContext } from "../App";
 const Login = (props) => {
     const defaultusername = "Username here";
     const defaultpassword = "Password here";
-    const [username, setUsername] = useState(defaultusername);
-    const [password, setPassword] = useState(defaultpassword);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
     };
@@ -17,17 +17,18 @@ const Login = (props) => {
         setPassword(e.target.value);
     };
     const navigate = useNavigate();
-    const [userId, setUserId] = useContext(UserIdContext);
+    const userId = useContext(UserIdContext);
+    // const [userId, setUserId] = useContext(UserIdContext);
     const handleLogin = (e) => {
         e.preventDefault();
-        post("/api/login", {
+        post("user/login/", {
             username: username,
             password: md5(password),
         })
             .then((response) => alert(response))
             .then(() => navigate("/"))
             .then(() => props.getUserInfo && props.getUserInfo())
-            .catch((error) => alert.log(error));
+            .catch((error) => alert(error));
     };
     useEffect(() => {
         if (userId) {
