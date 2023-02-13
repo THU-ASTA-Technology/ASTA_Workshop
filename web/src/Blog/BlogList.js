@@ -9,4 +9,8 @@ const LatestBlog = (props) => {
     );
 }
 
+<<<<<<< HEAD
 export { LatestBlog };
+=======
+export { LatestBlog };
+>>>>>>> 652bb75 (remove blog)
