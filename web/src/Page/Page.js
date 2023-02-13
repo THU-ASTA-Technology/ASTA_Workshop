@@ -13,8 +13,14 @@ const Page = (props) => {
 
 const NotFound = (props) => {
     return (
-        <h1 className="u-textCenter">Not Found</h1>
+        <h1>Not Found</h1>
     );
 };
 
-export { Page, NotFound };
+const Loading = (props) => {
+    return (
+        <h1 className="u-textCenter">Loading</h1>
+    );
+}
+
+export { Page, NotFound, Loading };

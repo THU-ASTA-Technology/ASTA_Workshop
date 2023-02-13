@@ -1,46 +1,45 @@
 import React, { useEffect, useState } from "react";
+import { Loading } from "../Page/Page";
+import { get } from "../utils";
 import { EmptyBroadcastBlock, BroadcastBlock } from "./BroadcastBlock";
-import BroadcastEdit from "./BroadcastEdit";
-import { get } from "../utils"
 import "./BroadcastList.css";
 
-
 const LatestBroadcast = (props) => {
-    //let broadcast1 = {content:"hello world!",time:new Date().toString()};
+    const [broadcast, setBroadcast] = useState({});
+    const [loading, setLoading] = useState(true);
 
-    let broadcast1 = {};
-    const [broadcast, setBroadcast] = useState(broadcast1);
-    //Todo: 让LatestBroadcast呈现出与BroadcastList中不同的样式
-
-    //begin
     const getLatestBroadcast = () => {
+        setLoading(true);
         get("broadcast/latest/")
             .then((response) => {
                 if (Object.keys(response).length !== 0) {
-                    setBroadcast(response)
+                    setBroadcast(response);
                 }
             })
-            .catch((error) => console.log(error));
-    }
+            .then(() => setLoading(false))
+            .catch((error) => alert(error));
+    };
 
     useEffect(getLatestBroadcast, []);
-    //end
 
-
+    if (loading) {
+        return (
+            <Loading />
+        );
+    }
 
     if (Object.keys(broadcast).length === 0) {
         return <EmptyBroadcastBlock />
     }
+
     return (
         <BroadcastBlock broadcast={broadcast} />
     );
-}
+};
 
 const BroadcastList = (props) => {
-    
+    // need to get broadcast from here
     const [broadcastList, setBroadcastList] = useState([]);
-    
-    //begin
     const getBroadcastList = () => {
         get("broadcast/list/")
             .then((response) => {
@@ -48,16 +47,14 @@ const BroadcastList = (props) => {
                     setBroadcastList(response);
                 }
             })
-            .catch((error) => console.log(error));
-    }
+            .catch((error) => alert(error));
+    };
 
     useEffect(getBroadcastList, []);
-    //end
 
     if (broadcastList.length === 0) {
         return (
             <div className="BroadcastList-container">
-                <BroadcastEdit />
                 <EmptyBroadcastBlock />
             </div>
         );
@@ -65,12 +62,8 @@ const BroadcastList = (props) => {
 
     return (
         <div className="BroadcastList-container u-flexColumn">
-            <BroadcastEdit />
-            <div className="Broadcast-list">
-                {broadcastList.map((broadcast) => <BroadcastBlock key={broadcast.broadcastId} broadcast={broadcast} />)}
-            </div>
+            {broadcastList.map((broadcast) => <BroadcastBlock key={broadcast.broadcastId} broadcast={broadcast} />)}
         </div>
-
     );
 };
 

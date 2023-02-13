@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Profile from "../Profile/Profile";
 import { LatestBroadcast } from "../Broadcast/BroadcastList";
-import "./Home.css";
-import { Link } from "react-router-dom";
-
-
 import { LatestTape } from "../Tape/TapeList";
 import { LatestBlog } from "../Blog/BlogList";
+import "./Home.css";
 import { get } from "../utils";
+import { Link } from "react-router-dom";
 
 const Home = (props) => {
-    const [tapeNum, setTapeNum] = useState(0)
-    const [blogNum, setBlogNum] = useState(0)
+    const [tapeNum, setTapeNum] = useState(0);
+    const [blogNum, setBlogNum] = useState(0);
 
     const getTapeNum = () => {
         get("tape/list/")
             .then((response) => setTapeNum(response.length))
-            .catch((error) => console.log(error));
+            .catch((error) => alert(error));
     };
 
     const getBlogNum = () => {
+        // TODO: get tape num here
         setBlogNum(0);
     };
 
@@ -31,27 +30,24 @@ const Home = (props) => {
     return (
         <div className="Home-container u-flexColumn">
             <LatestBroadcast />
-            <Profile className="Home-profile" />
-
-            <br />
-            <br />
+            <Profile  className="Home-profile" />
             <div className="Home-stat u-flex">
-                <></>
                 <div className="Home-subContainer u-flexColumn u-flex-alignCenter">
                     <Link to="/tape" className="Home-tapeText">
                         {"Tape: " + tapeNum}
                     </Link>
+                    <br />
                     <LatestTape />
                 </div>
                 <div className="Home-subContainer u-flexColumn u-flex-alignCenter">
                     <Link to="/blog" className="Home-blogText">
                         {"Blog: " + blogNum}
                     </Link>
+                    <br />
                     <LatestBlog className="Home-tapeAndBlog" />
                 </div>
             </div>
         </div>
-        
     );
 };
 

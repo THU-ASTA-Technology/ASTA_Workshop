@@ -1,0 +1,31 @@
+.BlogBlock-container {
+    max-width: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
+.Blog-blogLinks{
+    text-decoration:none;
+    color:chocolate;
+    flex-wrap: wrap;
+}
+
+.BlogDetail-link {
+    color: inherit;
+    cursor: pointer;
+    text-decoration-line: none;
+    flex-wrap: wrap;
+}
+
+.SingleBlog-initTime {
+    margin-right: var(--m);
+    flex-wrap: wrap;
+}
+
+.SingleBlog-title {
+    font-weight: 400;
+    font-size: large;
+    flex-wrap: wrap;
+}

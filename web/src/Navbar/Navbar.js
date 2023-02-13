@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 
-const Navbar = (props) => {
+import "./NavBar.css";
+
+const NavBar = (props) => {
     return (
-        <div className="Navbar-container u-flex u-flex-justifySpace">
-            <div className="Navbar-title">
-                导航栏 is here
-            </div>
+        <nav className="NavBar-container u-flex u-flex-justifySpace">
+            {/* TODO: change the title of the navbar */}
+            <div className="NavBar-title">ASTA Demo</div>
             <div className="NavBar-linkContainer u-flex">
-                <Link to="/" className="NavBar-link">Home</Link>
-                <Link to="/broadcast" className="NavBar-link">Broadcast</Link>
-                <Link to="/tape" className="NavBar-link">Tape</Link>
                 <Link to="/blog" className="NavBar-link">Blog</Link>
+                <Link to="/tape" className="NavBar-link">Tape</Link>
+                <Link to="/broadcast" className="NavBar-link">Broadcast</Link>
+                <Link to="/" className="NavBar-link">Home</Link>
                 {props.userId ?
                 <button onClick={props.handleLogout} className="NavBar-link">
                     Logout
@@ -23,6 +23,8 @@ const Navbar = (props) => {
                 </Link>
                 }
             </div>
-        </div>);
+        </nav>
+    );
 };
-export default Navbar;
+
+export default NavBar;

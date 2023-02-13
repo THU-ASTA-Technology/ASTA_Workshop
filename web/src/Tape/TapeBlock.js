@@ -1,25 +1,15 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import "./TapeBlock.css";
+import React, { useEffect, useState, useContext } from "react";
 import { get, post } from "../utils";
-import { useNavigate } from "react-router-dom";
-
-
-const EmptyTapeBlock = () => {
-    return (
-        <h3 className="u-textCenter">No tape so far</h3>
-    );
-};
+import "./TapeBlock.css";
+import { UserIdContext } from "../App";
 
 const SingleTape = (props) => {
     return (
         <div className="SingleTape-container u-flexColumn">
-            <div className="SingleTape-time u-flex">
+            <div className="SingleTape-time u-flex time">
                 {props.time}
                 {props.hasReply ? 
-                <>
-                    
-                </>
+                <></>
                 : 
                 <>
                     <div className="note">
@@ -35,6 +25,12 @@ const SingleTape = (props) => {
     );
 };
 
+const EmptyTapeBlock = () => {
+    return (
+        <h3 className="u-textCenter">No tape so far</h3>
+    );
+};
+
 const TapeReply = (props) => {
     const defaultReply = "Reply here";
     const [reply, setReply] = useState("");
@@ -47,14 +43,19 @@ const TapeReply = (props) => {
         props.handleSubmit && props.handleSubmit(reply);
     };
 
-    
     return (
         <div className="replyReply-container u-flexColumn">
             <div className="replyReply-container u-flexColumn">
-                <textarea className="Tape-textarea" placeholder={defaultReply} value={reply} onChange={handleReplyChange}></textarea>
+                <textarea className="Tape-textarea" 
+                    placeholder={defaultReply} 
+                    value={reply} 
+                    onChange={handleReplyChange}>
+                </textarea>
             </div>
-            <div className="Tape-button-right">
-                <button className="Tape-button-border Tape-button-cursor tape Tape-submitButton" onClick={handleSubmit}>Submit</button>
+            <div className="button-right">
+                <button className="button Tape-submitButton" onClick={handleSubmit}>
+                    Submit
+                </button>
             </div>
         </div>
     )
@@ -62,7 +63,9 @@ const TapeReply = (props) => {
 
 const TapeBlock = (props) => {
     const [tape, setTape] = useState(props.tape);
-    const navigate = useNavigate();
+
+    const userId = useContext(UserIdContext);
+    
     const handleSubmit = (reply) => {
         post("tape/edit/", {...tape, reply: reply})
             .then(() => {
@@ -73,8 +76,7 @@ const TapeBlock = (props) => {
                         setReplyInput(nullInput);
                     })
             })
-            .then(() => navigate(0))
-            .catch((error) => console.log(error));
+            .catch((error) => alert(error));
     };
 
     const [isShow, setIsShow] = useState(false);
@@ -83,7 +85,7 @@ const TapeBlock = (props) => {
     const [input, setInput] = useState(nullInput);
     
     const handleClick = (event) => {
-       
+        if (userId) {
             if (!isShow) {
                 setInput(replyInput);
                 setIsShow(true);
@@ -91,11 +93,11 @@ const TapeBlock = (props) => {
                 setInput(nullInput);
                 setIsShow(false);
             };
-        
+        }
     };
 
     return (
-        <div className="TapeBlock-container u-flexColumn border">
+        <div className="TapeBlock-container u-flexColumn border block">
             <div className="TapeBlock-tape u-flex" onClick={handleClick}>
                 <SingleTape 
                     content={tape.query} 

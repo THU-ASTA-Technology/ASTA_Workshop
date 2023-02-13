@@ -4,7 +4,6 @@ from database import tools
 from datetime import datetime
 import json
 
-
 def list(request):
     if (request.method != "GET"):
         return HttpResponse("Invalid HTTP Method!", status=400)
@@ -13,7 +12,6 @@ def list(request):
     for tape in tapeList:
         result.append(tools.tapeToDict(tape))
     return HttpResponse(json.dumps(result), content_type="application/json")
-
 
 def latest(request):
     if (request.method != "GET"):
@@ -25,6 +23,15 @@ def latest(request):
         break
     return HttpResponse(json.dumps(result), content_type="application/json")
 
+def detail(request):
+    if (request.method != "GET"):
+        return HttpResponse("Invalid HTTP Method!", status=400)
+    try:
+        id = request.GET.get("tapeId")
+        tape = Tape.objects.get(id = id)
+    except:
+        return HttpResponse("Tape Not Found!", status=400)
+    return HttpResponse(json.dumps(tools.tapeToDict(tape)), content_type = 'application/json')
 
 def edit(request):
     if (request.method != "POST"):
@@ -38,9 +45,9 @@ def edit(request):
     else:
         try:
             id = body["tapeId"]
-            tape = Tape.objects.get(id=id)
-        except:
-            return HttpResponse("Tape Not Found!", status=400)
+            tape = Tape.objects.get(id = id)
+        except: 
+            return HttpResponse("Tape Not Found!", status = 400)
         if ("reply" not in body.keys()):
             return HttpResponse("Reply Missing!", status=200)
         tape.reply = body["reply"]

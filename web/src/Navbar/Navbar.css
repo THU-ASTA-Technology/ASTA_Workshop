@@ -1,33 +1,37 @@
-.Navbar-container {
+.NavBar-container {
+    margin: 0px;
     padding: var(--s) var(--m);
     background-color: var(--primary);
 }
 
-.Navbar-title {
+.NavBar-title {
+    margin-left: var(--s);
     color: var(--white);
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    flex-wrap: wrap-reverse;
+    font-size: large;
+    flex-grow: 2;
 }
 
 .NavBar-linkContainer {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
+    flex-grow: 5;
+    flex-wrap: wrap-reverse;
+    align-items:center;
+    flex-direction: row-reverse;
 }
 
+/* TODO: visited */
 .NavBar-link {
+    margin-left: 5px;
+    margin-right: 5px;
     color: var(--white);
-    text-decoration-line: none;
-    margin: 0;
-    padding: 0;
-    margin-left: 4px;
-    margin-right: 4px;
+    text-decoration: none;
+    font-size: medium;
+    text-align:center;
 }
 
 .NavBar-link:hover {
-    opacity: 60%;
+    opacity: 0.8;
 }
+
+/* .NavBar-link + .NavBar-link {
+    margin-right: var(--m);
+} */

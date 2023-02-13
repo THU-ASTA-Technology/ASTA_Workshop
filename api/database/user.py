@@ -1,10 +1,3 @@
-from database.models import User
-from django.http import HttpResponse
-import json
-from django.contrib import auth
-
-# To do for the later lecture.
-# Also you can take it as a practice.
 from django.http import HttpResponse
 from database.models import User
 from django.contrib import auth
@@ -22,9 +15,9 @@ def login(request):
         return HttpResponse("Password Missing!", status=400)
     username = body["username"]
     password = body["password"]
-    user = auth.authenticate(username=username, password=password)
+    user = auth.authenticate(username = username, password = password)
     if user:
-        auth.login(request, user)
+        auth.login(request,user)
         return HttpResponse("Login Successfully!", status=200)
     else:
         return HttpResponse("Invalid Username or Password!", status=400)
@@ -58,8 +51,8 @@ def register(request):
         return HttpResponse("Password Missing!", status=400)
     username = body["username"]
     password = body["password"]
-    if (len(User.objects.all())):
-        return HttpResponse("Only One User Is Allowed To Register", status=400)
+    # if (len(User.objects.all())):
+    #     return HttpResponse("Only One User Is Allowed To Register", status=400)
     if (len(User.objects.filter(username=username))):
         return HttpResponse("Username Existed!", status=400)
     user = User.objects.create_user(username=username, password=password)

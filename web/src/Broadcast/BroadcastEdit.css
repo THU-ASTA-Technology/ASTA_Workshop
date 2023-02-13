@@ -1,6 +1,7 @@
 .BroadcastEdit-container {
   height: 100%;
   width: 100%;
+  margin-bottom: var(--s);
 }
 
 .BroadcastEdit-textarea {
@@ -9,9 +10,4 @@
 
 .BroadcastEdit-publish {
   font-size: medium;
-}
-
-.BroadcastEdit-publishContainer {
-  display: flex;
-  flex-direction: row-reverse;
 }

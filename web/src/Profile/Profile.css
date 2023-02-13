@@ -1,31 +1,55 @@
-body {
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
+.Profile-container {
+    margin: var(--m);
+    padding: var(--m) var(--m);
 }
 
-.profile {
-    margin-top: 8px;
-}
-
-.profile-avatar {
-    padding: 0 35%;
-}
-
-.profile-name {
+.Profile-name {
+    margin: var(--s);
+    font-size: large;
     font-size: 2.4em;
-    font-weight: 400;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 2s infinite;
+  
 }
 
-.profile-line {
-    border-color: var(--grey);
+@keyframes shine{
+    0%{opacity: 1;}
+    50%{opacity: 0.2;}
+    100%{opacity: 1;}
 }
 
-.profileItem-title {
-    font-size: 1.5em;
-    font-weight: 400;
-    margin: var(--m) var(--s);
+.Profile-avatar:hover {
+    transform: rotateY(-180deg);
 }
 
-.profile-item {
-    flex: 1;
+.Profile-avatar {
+    padding: 0 35%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+/* .ProfileItem-container {
+} */
+
+.ProfileItem-title {
+    flex-grow: 2;
+    flex-basis: 0;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ProfileItem-content {
+    flex-grow: 8;
+    flex-basis: 0;
+    margin-left: var(--m);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Profile-social{
+    font-family:'Courier New', Courier, monospace;
+    
 }

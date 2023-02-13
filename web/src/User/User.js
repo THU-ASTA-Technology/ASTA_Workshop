@@ -23,7 +23,17 @@ const Login = (props) => {
 
     const navigate = useNavigate();
     const handleLogin = (event) => {
-        //TODO: add login logic
+        event.preventDefault();
+        console.log(password)
+        post("user/login/", {
+            username: username,
+            password: md5(password)
+        })
+            .then((response) => alert(response))
+            .then(() => navigate(-1))
+            // .then(() => navigate(0))
+            .then(() => props.getUserInfo && props.getUserInfo())
+            .catch((error) => alert(error));
     };
 
     useEffect(() => {
@@ -35,7 +45,7 @@ const Login = (props) => {
     return (
         <div className="Login-container u-flexColumn">
             <input placeholder={defaultUsername} value={username} onChange={handleUsernameChange}></input>
-            <input placeholder={defaultPassword} value={password} onChange={handlePasswordChange}></input>
+            <input placeholder={defaultPassword} value={password} onChange={handlePasswordChange} type={"password"}></input>
             <button className="button" onClick={handleLogin}>Login</button>
             <div className="Login-register">
                 {"Don't have an account? "}
@@ -68,7 +78,18 @@ const Register = (props) => {
 
     const navigate = useNavigate();
     const handleRegister = (event) => {
-        //TODO: add register logic
+        event.preventDefault();
+        if (password !== passwordAgain) {
+            alert("Passwords Are Not Identical!");
+        } else {
+            post("user/register/", {
+                username: username,
+                password: md5(password)
+            })
+                .then((response) => alert(response))
+                .then(() => navigate("/"))
+                .catch((error) => alert(error));
+        }
     };
     
     useEffect(() => {
@@ -80,8 +101,8 @@ const Register = (props) => {
     return (
         <div className="Register-container u-flexColumn">
             <input placeholder={defaultUsername} value={username} onChange={handleUsernameChange}></input>
-            <input placeholder={defaultPassword} value={password} onChange={handlePasswordChange}></input>
-            <input placeholder={defaultPasswordAgain} value={passwordAgain} onChange={handlePasswordAgainChange}></input>
+            <input placeholder={defaultPassword} value={password} onChange={handlePasswordChange} type={"password"}></input>
+            <input placeholder={defaultPasswordAgain} value={passwordAgain} onChange={handlePasswordAgainChange} type={"password"}></input>
             <button onClick={handleRegister} className="button">Register</button>
         </div>
     );
