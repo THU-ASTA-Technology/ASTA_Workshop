@@ -20,8 +20,8 @@
   - 查看`api/uwsgi.ini`的配置文件是否正确
   - 将`api`文件夹通过`scp`命令上传到服务器对应位置`workspace`
 - docker(yarn和django为例)
-  - 服务器已有镜像`project:1.1`，包含了部署所需的所有东西，使用`docker images`查看
-  - 启动命令`docker run -itd -p <port1>:3000 -p <port2>:8000 -v <path to workspace>:/home/workspace --name <container name> project:1.0`，其中`port1`和`port2`为分配的两个端口，3000和8000参考Nginx中的配置
+  - 服务器已有镜像`7hink/project:1.1`，包含了部署所需的所有东西，使用`docker images`查看
+  - 启动命令`docker run -itd -p <port1>:3000 -p <port2>:8000 -v <path to workspace>:/home/workspace --name <container name> 7hink/project:1.1`，其中`port1`和`port2`为分配的两个端口，3000和8000参考Nginx中的配置
   - 进入容器命令`docker exec -it <container name> /bin/bash`
   - 进入容器后，查看并修改Nginx和supervisor配置，查看`/start.sh`是否正确
   - 在容器内执行`bash /start.sh`启动Nginx和uWSGI。若代码无误，在浏览器访问`http://<server ip>:<port1>`即可看到自己部署的网站
