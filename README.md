@@ -11,16 +11,16 @@
   - `cd api`进入`api`，在`api`目录下执行`python3 manage.py runserver`启动后端服务器
 ### 服务器部署
 - 前端(yarn为例)
-  - 修改`web/src/config.js`里面的server为服务器的ip
+  - 修改`web/src/config.js`里面的server为服务器的ip和端口
   - 在`web`目录下执行`yarn build`打包
   - 将`web/build`文件夹通过`scp`命令上传到服务器对应位置`workspace`
 - 后端(django为例)
-  - 在`api/api/settings.py`中涉及到前端的ip的位置添加服务器ip
+  - 在`api/api/settings.py`中涉及到前端的ip的位置添加服务器ip和端口
   - 查看`api/api/settings.py`中的`DEBUG`是否为`False`
   - 查看`api/uwsgi.ini`的配置文件是否正确
   - 将`api`文件夹通过`scp`命令上传到服务器对应位置`workspace`
 - docker(yarn和django为例)
-  - 服务器已有镜像`project:1.0`，包含了部署所需的所有东西，使用`docker images`查看
+  - 服务器已有镜像`project:1.1`，包含了部署所需的所有东西，使用`docker images`查看
   - 启动命令`docker run -itd -p <port1>:3000 -p <port2>:8000 -v <path to workspace>:/home/workspace --name <container name> project:1.0`，其中`port1`和`port2`为分配的两个端口，3000和8000参考Nginx中的配置
   - 进入容器命令`docker exec -it <container name> /bin/bash`
   - 进入容器后，查看并修改Nginx和supervisor配置，查看`/start.sh`是否正确
