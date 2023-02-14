@@ -1,0 +1,32 @@
+server {
+    listen         8000;
+    charset        UTF-8;
+    error_log /var/log/nginx_error_back.log;
+
+    location /static {
+
+            add_header Access-Control-Allow-Origin $http_origin;
+            add_header Access-Control-Allow-Methods 'GET,POST';
+            add_header Access-Control-Allow-Headers 'Access-Control-Allow-Origin,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
+
+        alias /home/workspace/api/static;
+    }
+
+    location / {
+        uwsgi_pass  unix:///home/workspace/api/demo.sock;
+        include     /etc/nginx/uwsgi_params;
+
+	add_header Access-Control-Allow-Headers 'Access-Control-Allow-Origin,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
+    }
+}
+server {
+    listen  	3000;
+    charset        UTF-8;
+    error_log /var/log/nginx_error_front.log;
+
+    location / {
+        root  /home/workspace/web/build;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+}

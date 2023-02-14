@@ -142,6 +142,7 @@ CSRF_COOKIE_SAMESITE = None
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://localhost:6001',
 ]
 CSRF_FAILURE_VIEW = 'database.views.csrf_failure'
 # CORS_ORIGIN_ALLOW_ALL=True
@@ -150,4 +151,5 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
 	'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://localhost:6001',
 ]
