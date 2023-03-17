@@ -1,0 +1,37 @@
+.NavBar-container {
+    margin: 0px;
+    padding: var(--s) var(--m);
+    background-color: var(--primary);
+}
+
+.NavBar-title {
+    margin-left: var(--s);
+    color: var(--white);
+    font-size: large;
+    flex-grow: 2;
+}
+
+.NavBar-linkContainer {
+    flex-grow: 5;
+    flex-wrap: wrap-reverse;
+    align-items:center;
+    flex-direction: row-reverse;
+}
+
+/* TODO: visited */
+.NavBar-link {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: medium;
+    text-align:center;
+}
+
+.NavBar-link:hover {
+    opacity: 0.8;
+}
+
+/* .NavBar-link + .NavBar-link {
+    margin-right: var(--m);
+} */

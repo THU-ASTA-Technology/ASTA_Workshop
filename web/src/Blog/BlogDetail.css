@@ -1,0 +1,23 @@
+.BlogDetail-container {
+    max-width: 100%;
+    width: 100%;
+    padding: var(--s);
+    word-wrap: 1;
+}
+
+.BlogDetail-initTime {
+    margin-right: var(--m);
+}
+
+.BlogDetail-title {
+    margin-right: var(--m);
+}
+
+.BlogDetail-titleContainer {
+    font-size: larger;
+    font-weight: 400;
+}
+
+.BlogDetail-editButton {
+    font-size: medium;
+}

@@ -1,0 +1,134 @@
+:root {
+    --primary--dark: #0000ff;
+    --primary: #396dff;
+    --primary--dim: #6987db;
+    --darkgrey: #d4d4d4;
+    --medgrey: #e0e0e0;
+    --grey: #f7f7f7;
+    --white: #fff;
+    --black: #000000;
+  
+    --xs: 4px;
+    --s: 8px;
+    --m: 16px;
+    --l: 24px;
+    --xl: 32px;
+    --xxl: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+.u-break {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.u-flex {
+    display: flex;
+}
+  
+.u-flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.u-flex-justifySpace {
+    justify-content: space-between;
+}
+
+.u-flex-justifyCenter {
+    justify-content: center;
+}
+
+.u-flex-alignCenter {
+    align-items: center;
+}
+
+.u-inlineBlock {
+    display: inline-block;
+}
+
+.u-bold {
+    font-weight: 600;
+}
+
+.u-textCenter {
+    text-align: center;
+}
+
+.u-relative {
+    position: relative;
+}
+
+.u-pointer {
+    cursor: pointer;
+}
+
+.u-link {
+    color: var(--black);
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.u-link:hover {
+    color: var(--primary--dim);
+}
+
+.border {
+    border: 2px solid var(--darkgrey);
+    /* border-radius: 2px; */
+    border-radius: 1em;
+}
+
+.block {
+    padding: 8px;
+    padding-right: 0px;
+    margin: 0px;
+    text-decoration-line: none;
+}
+
+.block + .block {
+    margin-top: 8px;
+}
+
+.block:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.time {
+    opacity: 80%;
+    font-family: monospace;
+}
+
+.button {
+    color: var(--white);
+    background-color: var(--primary);
+    text-decoration-line: none;
+    padding: 2px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin: 0px;
+    border: 2px solid var(--darkgrey);
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--primary--dark);
+    border-color: var(--primary--dim);
+}
+
+.button-right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.line {
+    border-color: var(--grey);
+}

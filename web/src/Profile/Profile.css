@@ -1,0 +1,55 @@
+.Profile-container {
+    margin: var(--m);
+    padding: var(--m) var(--m);
+}
+
+.Profile-name {
+    margin: var(--s);
+    font-size: large;
+    font-size: 2.4em;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 2s infinite;
+  
+}
+
+@keyframes shine{
+    0%{opacity: 1;}
+    50%{opacity: 0.2;}
+    100%{opacity: 1;}
+}
+
+.Profile-avatar:hover {
+    transform: rotateY(-180deg);
+}
+
+.Profile-avatar {
+    padding: 0 35%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+/* .ProfileItem-container {
+} */
+
+.ProfileItem-title {
+    flex-grow: 2;
+    flex-basis: 0;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ProfileItem-content {
+    flex-grow: 8;
+    flex-basis: 0;
+    margin-left: var(--m);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Profile-social{
+    font-family:'Courier New', Courier, monospace;
+    
+}

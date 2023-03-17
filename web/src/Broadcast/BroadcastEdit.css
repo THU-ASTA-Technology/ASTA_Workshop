@@ -1,0 +1,13 @@
+.BroadcastEdit-container {
+  height: 100%;
+  width: 100%;
+  margin-bottom: var(--s);
+}
+
+.BroadcastEdit-textarea {
+  resize:vertical;
+}
+
+.BroadcastEdit-publish {
+  font-size: medium;
+}
